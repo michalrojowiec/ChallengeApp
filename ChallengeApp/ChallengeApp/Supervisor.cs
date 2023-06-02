@@ -13,7 +13,7 @@
 
         public string Name { get; private set; }
         public string Surname { get; private set; }
-       
+
         public void AddGrade(float grade)
         {
             if (grade >= 0 && grade <= 100)
@@ -50,12 +50,12 @@
             grades.Add(gradesAsFloat);
         }
 
-      
+
         public void AddGrade(string grade)
         {
             switch (grade)
             {
-                case "6":              
+                case "6":
                     this.grades.Add(100);
                     break;
                 case "-6":

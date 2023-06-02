@@ -1,7 +1,7 @@
 ﻿namespace ChallengeApp
 {
     public abstract class Person : System.Object
-    {   
+    {
         public Person()
         {
 
@@ -14,10 +14,12 @@
             this.Age = age;
             this.Sex = sex;
         }
-     
-          public string Name { get; private set; }
-          public string Surname { get; private set; }
-          public int Age { get; private set; }
-          public string Sex { get; private set; }
+
+        public string Name { get; private set; }
+        public string Surname { get; private set; }
+        public int Age { get; private set; }
+        public string Sex { get; private set; }
     }
 }
+
+
