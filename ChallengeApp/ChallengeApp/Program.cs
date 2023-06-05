@@ -4,12 +4,16 @@ Console.WriteLine("Witamy w aplikacji XYZ do oceny Pracowników");
 Console.WriteLine("===========================================");
 Console.WriteLine();
 
-var employee = new EmployeeInFile("Michał", "Kowalik");
-employee.AddGrade(0.5);
-employee.AddGrade(15);
-employee.AddGrade(45);
-employee.AddGrade(30);
-employee.AddGrade(12);
+var employee = new EmployeeInMemory("Michał", "Kowalik");
+employee.GradeAdded += EmployeeGradeAdded;
+
+void EmployeeGradeAdded(object sender, EventArgs args)
+{
+    Console.WriteLine("Dodano nową ocenę");
+}
+
+employee.AddGrade(0.5f);
+
 
 while (true)
 {
